@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Lớp cha trừu tượng
+    class Animal {
+        constructor(name) {
+            this.name = name;
+        }
+        // Phương thức trừu tượng
+        speak() {
+            throw new Error();
+        }
+    }
+    // Lớp con tuân thủ từ Animal
+    class Dog extends Animal {
+        speak() {
+            console.log(`${this.name} chạy`);
+        }
+    }
+    // Lớp con tuân thủ từ Animal
+    class Cat extends Animal {
+        speak() {
+            console.log(`${this.name} meo meo`);
+        }
+    }
+    let dog = new Dog('Buddy');
+    let cat = new Cat('Whiskers');
+    dog.speak();  // Output: "Buddy sủa"
+    cat.speak();  // Output: "Whiskers meo meo"
+
+</script>
+</body>
+</html>

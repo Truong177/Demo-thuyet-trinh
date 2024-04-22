@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Lớp cha
+    class Animal {
+        speak() {
+            throw new Error("Phương thức 'speak' phải được cài đặt trong lớp con");
+        }
+    }
+    // Lớp con Dog kế thừa từ Animal
+    class Dog extends Animal {
+        speak() {
+            return "Woof!";
+        }
+    }
+    // Lớp con Cat kế thừa từ Animal
+    class Cat extends Animal {
+        speak() {
+            return "Meow!";
+        }
+    }
+    let dog = new Dog();
+    let cat = new Cat();
+    console.log(dog.speak());
+    console.log(cat.speak());
+
+
+</script>
+</body>
+</html>

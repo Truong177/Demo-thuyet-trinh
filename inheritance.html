@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Lớp cha
+    class Animal {
+        constructor(name) {
+            this.name = name;
+        }
+        speak() {
+            console.log(`${this.name} kêu`);
+        }
+    }
+    // Lớp con kế thừa từ Animal
+    class Dog extends Animal {
+        fetch() {
+            console.log(`${this.name} đang chạy`);
+        }
+    }
+    // Tạo đối tượng từ lớp con Dog
+    let dog = new Dog('Buddy');
+    dog.speak();
+    dog.fetch();
+
+</script>
+</body>
+</html>
